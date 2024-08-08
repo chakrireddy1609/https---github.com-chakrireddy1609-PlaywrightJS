@@ -1,6 +1,6 @@
 const {test, expect} = require("@playwright/test");
 
-test('Playwright',async({browser})=>{
+test('ServiceNow',async({browser})=>{
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto("https://careers.servicenow.com/en/");

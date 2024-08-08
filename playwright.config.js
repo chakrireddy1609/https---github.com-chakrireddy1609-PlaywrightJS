@@ -38,10 +38,16 @@ module.exports = defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+    {
+      name: 'webkit',
+      use: {
+        ...devices['Desktop Chrome'],
+      },
+    }
 
   
 
-    /* Test against mobile viewports. */
+    /* Test against mobile viewports. */  
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
