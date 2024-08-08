@@ -10,7 +10,7 @@ test('ServiceNow',async({browser})=>{
     await page.getByText("See Open Jobs").click();
     await expect(page.locator(".card-job").nth(10)).toBeVisible();
     await page.locator("input#l-search").fill("QA");
-    await page.getByText("Apply filters").click();
+    await page.getByRole("button",{name:'Apply filters'}).click();
     await expect(page.locator(".card-job").nth(10)).toBeVisible();
     const totalJobs = await page.locator(".job-count").textContent();
     console.log(totalJobs);
