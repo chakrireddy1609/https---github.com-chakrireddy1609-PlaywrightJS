@@ -1,4 +1,4 @@
-const {test,} = require("@playwright/test");
+const {test} = require("@playwright/test");
 const {POManager}=require("../pageObjects/POManager")
 
 test('Rahul Shetty',async({page})=>{
