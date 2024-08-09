@@ -1,10 +1,12 @@
 const {test} = require("@playwright/test");
 const {POManager}=require("../pageObjects/POManager")
+const dataset = JSON.parse(JSON.stringify(require("../utils/testDataRahul")))
 
-test('Rahul Shetty',async({page})=>{
+for (const data of dataset){
+test(`RahulShetty ${data.selection}`,async({page})=>{
     
     const pm = new POManager(page)
     await pm.rahulPage.navigation();
-    await pm.rahulPage.selection("Practice Page","option3");
+    await pm.rahulPage.selection(data.text,data.selection);
     
-})
+})}

@@ -1,6 +1,6 @@
 const {test} = require("@playwright/test");
 const {POManager}=require("../pageObjects/POManager")
-const dataset = JSON.parse(JSON.stringify(require("../utils/testData.json")))
+const dataset = JSON.parse(JSON.stringify(require("../utils/testDataServiceNow.json")))
 
 
 for (const data of dataset){
