@@ -1,11 +1,13 @@
-const {test, expect} = require("@playwright/test");
+const {test} = require("@playwright/test");
 const{serviceNow} = require("../pageObjects/serviceNow");
+const {POManager}=require("../pageObjects/POManager")
+
 
 
 test('ServiceNow',async({page})=>{
-    const servicenow = new serviceNow(page);
-    await servicenow.navigationJob();
-    await servicenow.searchJobs("Hyderabad","QA");
+    const pm = new POManager(page)
+    await pm.serviceNowPage.navigationJob();
+    await pm.serviceNowPage.searchJobs("Hyderabad","QA");
     
 
 })

@@ -1,10 +1,10 @@
-const {test, expect} = require("@playwright/test");
-const {rahul}=require("../pageObjects/rahul")
+const {test,} = require("@playwright/test");
+const {POManager}=require("../pageObjects/POManager")
 
 test('Rahul Shetty',async({page})=>{
     
-    const Rahul = new rahul(page);
-    await Rahul.navigation();
-    await Rahul.selection("Practice Page","option3");
+    const pm = new POManager(page)
+    await pm.rahulPage.navigation();
+    await pm.rahulPage.selection("Practice Page","option3");
     
 })
